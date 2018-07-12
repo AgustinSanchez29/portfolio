@@ -1,0 +1,437 @@
+html{
+  box-sizing: border-box;
+}
+*,*before,*:after{
+  box-sizing: inherit;
+}
+
+
+
+ body{
+      font-family: 'Dosis', sans-serif;
+      font-family: 'Pacifico', cursive;
+      font-family: 'Questrial', sans-serif;
+      background: #e9ecef;
+    }
+
+
+#slider{
+      background: url("imagenes/computer-device-display-953213.jpg") fixed;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      filter: grayscale(.2);
+
+    }
+
+@media only screen and (min-width:480px)
+{
+  #slider{
+    background-position: right;
+  }
+}
+
+    #aboutMe{
+          background: url("imagenes/cafe-indoors-man-116025.jpg") fixed;
+          height: 100vh;
+          background-size: cover;
+          background-position: center;
+          }
+
+          @media only screen and (min-width:480px)
+          {
+            #aboutMe{
+              background-position: right;
+            }
+          }
+
+
+    #proyectos{
+         background: url("imagenes/art-arts-and-crafts-brush-159657.jpg") fixed;
+         height: 100vh;
+         background-size: cover;
+         background-position: center;
+         }
+
+    #algo-mas{
+      background: url("imagenes/joanna-kosinska-289519-unsplash.jpg") fixed;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    }
+
+@media only screen and (min-width:480px)
+{
+  .tamano{
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+}
+
+    h1.Titulo{
+      color: #ffffff;
+      font-size: 7.3vw;
+      text-transform: uppercase;
+      font-weight: lighter;
+      display: flex;
+      justify-content: center;
+    }
+
+@media only screen and (min-width:768px)
+{
+  h1.Titulo{
+    font-size: 3.3vw;
+  }
+}
+
+h2{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contenedor{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width:480px) {
+  .contenedor{
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .contenedor{
+    width: 90%;
+  }
+}
+
+
+@media only screen and (min-width:992px) {
+  .contenedor{
+    width: 90%;
+    max-width: 1100px;
+  }
+}
+
+  div.contenedor-header{
+      padding: 300px 0;
+
+    }
+    div.contenido-header{
+      text-align: center;
+    }
+
+   div.redes-sociales{
+     text-align: center;
+   }
+
+   div.redes-sociales a{
+     font-size: 2em;
+     margin-right: 20px;
+     color: #ffffff;
+   }
+
+   div.abajo{
+     display: inline-block;
+     font-size: 4em;
+     line-height: 470px;
+     cursor: pointer;
+   }
+   div.abajo a{
+     color: #ffffff;
+     transition: all .6s ease;
+   }
+
+   /*Barra de navegacion*/
+
+
+div.nav{
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  height:50px;
+}
+/*
+div.logo p{
+  display: block;
+  text-align: center;
+  width: 200px;
+  color:#ffffff;
+  padding:10px 0px;
+  height:50px;
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+
+div.logo a{
+  text-decoration: none;
+}
+
+div.logo p:hover{
+  text-decoration: none;
+  background-color: rgba(179, 179, 179,.4);
+  color: #ffffff;
+  transition: all 2s ease;
+}
+
+*/
+
+nav.naveg{
+  display: none;
+}
+
+@media only screen and (min-width:768px)
+{
+  div.nav{
+    background-color: rgba(13, 13, 13,.8);
+  }
+  nav.naveg{
+    display: block;
+  }
+
+  nav.naveg{
+    width:100%;
+  }
+
+}
+
+
+div.logo{
+  float: left;
+}
+
+div.logo a{
+  font-size: 35px;
+  color: #ffffff;
+  margin-left: 15px;
+}
+
+div.menu{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+div.menu ul li a{
+  display: block;
+  width: 150px;
+  text-align: center;
+  text-decoration:none;
+  color:#ffffff;
+  padding:10px 0px;
+  height:50px;
+}
+
+div.menu ul li{
+  float: left;
+ }
+
+div.menu ul li a:hover{
+  text-decoration: none;
+  background-color: rgba(179, 179, 179,.4);
+  color: #ffffff;
+  transition: all 1s ease;
+}
+
+
+
+
+
+nav ul{
+  list-style: none;
+  margin-bottom: 0;
+}
+
+nav ul::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+
+
+
+
+
+
+/*contenido principal*/
+
+
+section#pensamiento{
+  height: 60vh;
+}
+
+section.section{
+  position: relative;
+}
+
+img.yo{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+div.perfil{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+}
+
+
+div.informacion1 a{
+  font-size: 2em;
+  color: #ffffff;
+}
+
+section#proyectos div.informacion1 p,h2{
+  color:#e6e6e6;
+}
+
+
+
+section#algo-mas div.informacion1{
+  text-align: right;
+}
+
+
+
+
+div.informacion{
+  width: 1200px;
+  margin: 25px auto;
+  text-align: center;
+  background-color: #c4ccd4;
+}
+
+
+div.informacion div h1{
+  text-align: center;
+  color: black;
+  margin: 10px 0 50px 0;
+}
+
+div.informacion~div{
+  margin-bottom: 20px;
+}
+
+
+div.informacion img{
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+div.informacion > div
+{
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+
+
+
+
+
+/*FINAL*/
+footer{
+  height: 100%;
+  background-color: rgb(13, 13, 13);
+}
+
+@media only screen and (min-width:768px)
+{
+  footer div.contenedor > div{
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+  }
+
+}
+
+
+
+div.titulo-footer h3{
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+div.titulo-footer h3 span{
+  color: #0c5460;
+}
+
+
+div.titulo-footer p
+{
+    color: #ffffff;
+}
+
+ footer div.redes-sociales a{
+   font-size: 25px;
+ }
+
+footer div.redes-sociales h3{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+div.redes-sociales h3 span{
+  color: #0c5460;
+}
+
+div.redes-sociales p{
+  color: #ffffff;
+  margin: 90px 0 0 130px;
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+/*@media only screen and (max-width: 480px)
+{
+  div #slider{
+    background-size: 100%;
+  }
+
+  p #informacion{
+    width: 100%;
+  }
+}*/
+
+@media only screen and (min-width: 780px)
+{
+  div.informacion > div{
+    display: inline-block;
+    padding: 15px;
+  }
+
+
+  div.informacion div.primero
+  {
+    width: 100%;
+  }
+
+   div.informacion div.segundo{
+    width: 50%;
+   }
+
+   div.informacion div.tercero{
+      content:'';
+      display: block;
+      clear: both;
+    }
+    div.informacion div.tercero{
+      width: 50%;
+      float: right;
+    }
+}
