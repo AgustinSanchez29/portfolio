@@ -11,11 +11,11 @@ html{
       font-family: 'Dosis', sans-serif;
       font-family: 'Pacifico', cursive;
       font-family: 'Questrial', sans-serif;
-      background: #e9ecef;
+      background-color:#e9ecef!important;
     }
 
 
-#slider{
+/*#slider{
       background: url("imagenes/computer-device-display-953213.jpg") fixed;
       height: 100vh;
       background-size: cover;
@@ -23,7 +23,7 @@ html{
       filter: grayscale(.2);
 
     }
-
+*/
 @media only screen and (min-width:480px)
 {
   #slider{
@@ -69,18 +69,19 @@ html{
 
 }
 
-    h1.Titulo{
-      color: #ffffff;
+    div.titulo h1{
+      color: black;
       font-size: 7.3vw;
       text-transform: uppercase;
       font-weight: lighter;
       display: flex;
-      justify-content: center;
+      justify-content: left;
     }
 
 @media only screen and (min-width:768px)
 {
-  h1.Titulo{
+  div.titulo h1
+  {
     font-size: 3.3vw;
   }
 }
@@ -115,34 +116,30 @@ h2{
   }
 }
 
-  div.contenedor-header{
-      padding: 300px 0;
+/*PRESENTACION*/
+div.presentacion{
+  height: 100vh;
+}
 
-    }
-    div.contenido-header{
-      text-align: center;
-    }
+div.contenido-header{
+    margin-top: 30%;
+}
 
-   div.redes-sociales{
-     text-align: center;
-   }
+div.titulo{
+  float: left;
+  height: 145px;
+}
+div.parrafo
+{
+  color: black;
+}
 
-   div.redes-sociales a{
-     font-size: 2em;
-     margin-right: 20px;
-     color: #ffffff;
-   }
 
-   div.abajo{
-     display: inline-block;
-     font-size: 4em;
-     line-height: 470px;
-     cursor: pointer;
-   }
-   div.abajo a{
-     color: #ffffff;
-     transition: all .6s ease;
-   }
+
+
+
+
+
 
    /*Barra de navegacion*/
 
