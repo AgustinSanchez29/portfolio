@@ -1,0 +1,141 @@
+html{
+  box-sizing: border-box;
+}
+*,*before,*:after{
+  box-sizing: inherit;
+}
+
+
+
+ body{
+      font-family: 'Raleway', sans-serif!important;
+      background-color:#e9ecef!important;
+    }
+
+
+.contenedor{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width:320px) {
+  .contenedor{
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .contenedor{
+    width: 90%;
+  }
+}
+
+
+@media only screen and (min-width:992px) {
+  .contenedor{
+    width: 90%;
+
+
+  }
+}
+
+/*NAVEGACION*/
+/*Barra de navegacion*/
+div.nav{
+width: 260px;
+z-index: 100;
+height:100vh;
+background-color: #1a1a1a;
+left: 0;
+top: 0;
+bottom: 0;
+position: fixed;
+}
+
+nav.naveg{
+display: none;
+}
+
+@media only screen and (min-width:768px)
+{
+
+    nav.naveg{
+     display: block;
+    }
+
+    nav.naveg{
+     width:100%;
+    }
+}
+
+
+nav.naveg{
+  padding-top: 40%;
+}
+
+div.titulo{
+  text-align: center;
+}
+
+div.titulo a{
+  text-decoration:none;
+}
+
+div.titulo h1{
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 85px;
+}
+
+
+div.menu{
+  text-align: center;
+}
+div.menu a{
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+div.menu a:hover{
+  display: inline-block;
+  border-bottom: 2px solid #ffffff;
+  transition: all 1s ease;
+}
+
+div.redes-sociales{
+  text-align: center;
+  margin-top: 85px;
+}
+
+div.redes-sociales a{
+  color: #ffffff;
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+/*CONTENIDO*/
+
+div.presentacion{
+  max-width:100%;
+  padding-left: 260px;
+  padding-top: 10%;
+}
+
+
+div.parrafo{
+  float: left;
+  width: 50%;
+  margin-right: 50px;
+}
+
+div.parrafo h1 span{
+  font-weight: bold;
+}
+
+
+div.imagen img{
+  width: 350px;
+}

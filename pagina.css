@@ -7,29 +7,22 @@ html{
 
 
 
+
  body{
-      font-family: 'Dosis', sans-serif;
-      font-family: 'Pacifico', cursive;
-      font-family: 'Questrial', sans-serif;
+      font-family: 'Raleway', sans-serif!important;
       background-color:#e9ecef!important;
     }
 
 
-/*#slider{
-      background: url("imagenes/computer-device-display-953213.jpg") fixed;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      filter: grayscale(.2);
-
-    }
-*/
-@media only screen and (min-width:480px)
-{
-  #slider{
-    background-position: right;
-  }
+h1{
+  color: black;
+  font-size: 7.3vw;
+  text-transform: uppercase;
+  font-weight: lighter;
+  display: block;
+  text-align: center!important;
 }
+
 
     #aboutMe{
           background: url("imagenes/cafe-indoors-man-116025.jpg") fixed;
@@ -38,10 +31,11 @@ html{
           background-position: center;
           }
 
-          @media only screen and (min-width:480px)
+          @media only screen and (max-width:667px)
           {
             #aboutMe{
               background-position: right;
+              height: 40vh;
             }
           }
 
@@ -53,6 +47,15 @@ html{
          background-position: center;
          }
 
+         @media only screen and (max-width:667px)
+         {
+           #proyectos{
+             background-position: right;
+             height: 40vh;
+           }
+         }
+
+
     #algo-mas{
       background: url("imagenes/joanna-kosinska-289519-unsplash.jpg") fixed;
       height: 100vh;
@@ -60,7 +63,16 @@ html{
       background-position: center;
     }
 
-@media only screen and (min-width:480px)
+    @media only screen and (max-width:667px)
+    {
+      #algo-mas{
+        background-position: left;
+        height: 40vh;
+      }
+    }
+
+
+@media only screen and (min-width:320px)
 {
   .tamano{
     overflow: hidden;
@@ -89,14 +101,16 @@ html{
 h2{
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 30px;
 }
 
 .contenedor{
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-@media only screen and (min-width:480px) {
+@media only screen and (min-width:320px) {
   .contenedor{
     width: 90%;
   }
@@ -117,81 +131,107 @@ h2{
 }
 
 /*PRESENTACION*/
-div.presentacion{
-  height: 100vh;
+
+
+@media only screen and (max-width:767px)
+{
+
+  div.titulo{
+    margin: 70px 0 35px 0;
+  }
+  div.abajo{
+    display: none;
+  }
+
 }
 
-div.contenido-header{
-    margin-top: 30%;
-}
+
 
 div.titulo{
+  margin: 0px 150px 45px 0;
   float: left;
   height: 145px;
 }
-div.parrafo
+
+
+div.titulo h1{
+  font-size: 2.7rem;
+}
+
+div.redes-sociales
 {
-  color: black;
+  text-align: left;
 }
 
 
+div.presentacion{
+  height: 100vh;
+}
+div.contenido-header{
+    margin-top: 27%;
+}
 
+div.parrafo
+{
+  color: black;
+  font-style: italic;
+  line-height: 28px;
+  display: table;
+  font-size: 18px;
+}
 
+div.parrafo span{
+  font-weight: bold;
+}
 
+div.redes-sociales a{
+  color: black;
+  font-size: 2.2rem;
+  margin-right: 20px;
+}
 
+div.abajo{
+  text-align: center;
+  line-height: 245px;
+}
+
+div.abajo a{
+  font-size: 3rem;
+  color: rgba(13, 13, 13,.8);
+  transition: all 1s ease;
+}
+
+div.abajo a:hover{
+  color: #8c8c8c;
+}
 
 
    /*Barra de navegacion*/
-
-
 div.nav{
   width: 100%;
   z-index: 1;
   position: fixed;
   height:50px;
+  background-color: rgba(13, 13, 13,.8);
 }
-/*
-div.logo p{
-  display: block;
-  text-align: center;
-  width: 200px;
-  color:#ffffff;
-  padding:10px 0px;
-  height:50px;
-  font-size: 1.2em;
-  font-weight: lighter;
-}
-
-div.logo a{
-  text-decoration: none;
-}
-
-div.logo p:hover{
-  text-decoration: none;
-  background-color: rgba(179, 179, 179,.4);
-  color: #ffffff;
-  transition: all 2s ease;
-}
-
-*/
 
 nav.naveg{
+  width:100%;
+}
+
+nav.naveg div.hamburger{
   display: none;
 }
 
-@media only screen and (min-width:768px)
+@media only screen and (max-width:767px)
 {
-  div.nav{
-    background-color: rgba(13, 13, 13,.8);
+  nav.naveg >div{
+    display: none;
   }
-  nav.naveg{
+  nav.naveg div.hamburger{
     display: block;
+    padding-top: 11px;
   }
-
-  nav.naveg{
-    width:100%;
-  }
-
 }
 
 
@@ -248,20 +288,79 @@ nav ul::after{
 }
 
 
+/*ESTILOS DEL BOTON DE MENU*/
+.hamburger
+{
+    min-height: 30px;
+    max-width: 50px;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background-color: #ffffff;
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    border-radius: 5px;
+    content: '';
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: opacity,-webkit-transform;
+    transition-property: transform,opacity;
+    transition-property: transform,opacity,-webkit-transform;
+}
+
+.hamburger-inner:before {
+    top: 10px;
+}
+
+.hamburger-inner:after {
+    top: 20px;
+}
+
+.hamburger.open .hamburger-inner {
+    -webkit-transform: translate3d(0,10px,0) rotate(45deg);
+    transform: translate3d(0,10px,0) rotate(45deg);
+}
+
+.hamburger.open .hamburger-inner:after {
+    -webkit-transform: translate3d(0,-20px,0) rotate(-90deg);
+    transform: translate3d(0,-20px,0) rotate(-90deg);
+}
+
+.hamburger.open .hamburger-inner:before {
+    -webkit-transform: translate3d(0,-20px,0) rotate(90deg);
+    transform: translate3d(0,-20px,0) rotate(90deg);
+    opacity: 0;
+}
+
+
+
+
 
 
 
 
 /*contenido principal*/
+.title
+{
 
-
-section#pensamiento{
-  height: 60vh;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.1;
 }
-
 section.section{
   position: relative;
 }
+
+@media only screen and (min-width: 768px)
+{
+  .title
+  {
+      font-size: 3.7rem;
+  }
+
+}
+
 
 img.yo{
   max-width: 100%;
@@ -293,39 +392,128 @@ section#algo-mas div.informacion1{
   text-align: right;
 }
 
-
-
-
-div.informacion{
-  width: 1200px;
-  margin: 25px auto;
-  text-align: center;
-  background-color: #c4ccd4;
+@media only screen and (max-width:667px)
+{
+  section div.informacion1 p,section div.informacion1 a{
+    display: none;
+  }
+  section h2.title{
+    display: flex;
+    justify-content: center;
+    line-height: 150px;
+  }
 }
 
 
-div.informacion div h1{
-  text-align: center;
-  color: black;
-  margin: 10px 0 50px 0;
+
+
+/*FORMULARIO*/
+section.contact{
+  height: 55vh;
+  background-color: #ffffff;
 }
 
-div.informacion~div{
+
+div.contenedor-form h2{
+  max-width: 100%;
+  padding-top: 80px;
+}
+
+div.contenedor-form p{
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+div.formulario{
+  display: flex;
+  padding: 40px 0 0 200px;
+}
+
+div.lista-contacto{
+  width: 50%;
+  float: left;
+}
+
+
+div.lista-contacto i{
+  font-size: 20px;
+  width: 30px;
+}
+
+
+
+div.datos{
+  width: 50%;
+}
+
+
+div.datos input,textarea{
+  border: 1px solid #ccc;
+}
+
+
+div.datos input{
+  display: block;
+  height: 30px;
+  width: 50%;
   margin-bottom: 20px;
 }
 
-
-div.informacion img{
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
+div.datos textarea{
+  display: block;
+  margin-bottom: 15px;
+  height: 65px;
+  width: 50%;
 }
 
-div.informacion > div
+div.datos button{
+  border: 1px solid #000000;
+  color: #ffffff;
+  background-color: #000000;
+  margin-left: 168px;
+}
+
+
+div.datos button:hover{
+  border: 1px solid #ccc;
+  color: #ffffff;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+
+@media only screen and (max-width:767px)
 {
-  margin-top: 30px;
-  margin-bottom: 50px;
+  section.contact{
+    height: 70vh;
+  }
+
+  div.formulario{
+    text-align: center;
+  }
+
+  div.lista-contacto{
+    display: none;
+  }
+
+  div.datos{
+    width: -100%;
+  }
+
+  div.datos input, textarea{
+    width: 100%;
+  }
+
+  div.datos button{
+    margin-left: 0;
+  }
+
 }
+
+
 
 
 
@@ -334,101 +522,103 @@ div.informacion > div
 
 /*FINAL*/
 footer{
-  height: 100%;
-  background-color: rgb(13, 13, 13);
+  background-color:	 #d9d9d9;
+  height: 42vh;
 }
-
-@media only screen and (min-width:768px)
-{
-  footer div.contenedor > div{
-    width: 50%;
-    float: left;
-    margin-top: 20px;
-  }
-
-}
-
-
-
-div.titulo-footer h3{
-  font-size: 1.5rem;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-}
-div.titulo-footer h3 span{
-  color: #0c5460;
-}
-
-
-div.titulo-footer p
-{
-    color: #ffffff;
-}
-
- footer div.redes-sociales a{
-   font-size: 25px;
+.titulo-footer{
+   padding: 25px 0;
+   text-align: center;
  }
 
-footer div.redes-sociales h3{
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    color: #ffffff;
+footer div.titulo-footer a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5em;
 }
 
-div.redes-sociales h3 span{
+footer div.titulo-footer a span{
   color: #0c5460;
+
 }
 
-div.redes-sociales p{
-  color: #ffffff;
-  margin: 90px 0 0 130px;
-  font-size: 13px;
+footer div .redes-sociales{
+  text-align: center;
+}
+
+div.foot{
+  margin-top: 30px;
+  text-align: center;
+}
+
+div.foot p{
+  font-size: 0.8em;
+  opacity: 0.8;
 }
 
 
-
-
-
-
-
-
-
-/*@media only screen and (max-width: 480px)
+@media only screen and (max-width:667px)
 {
-  div #slider{
-    background-size: 100%;
+  footer{
+    height: 54vh;
   }
 
-  p #informacion{
-    width: 100%;
-  }
-}*/
-
-@media only screen and (min-width: 780px)
-{
-  div.informacion > div{
-    display: inline-block;
-    padding: 15px;
+  div.titulo-footer a{
+    font-size: 1.4em;
   }
 
-
-  div.informacion div.primero
-  {
-    width: 100%;
+  div.parrafo-footer p{
+    font-size: 0.9em;
   }
 
-   div.informacion div.segundo{
-    width: 50%;
-   }
-
-   div.informacion div.tercero{
-      content:'';
-      display: block;
-      clear: both;
-    }
-    div.informacion div.tercero{
-      width: 50%;
-      float: right;
-    }
 }
+
+
+
+
+
+
+/*POR SI ACASO*/
+/*************ICONOS*****************/
+
+/*
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?qbegwf');
+  src:  url('fonts/icomoon.eot?qbegwf#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?qbegwf') format('truetype'),
+        url('fonts/icomoon.woff?qbegwf') format('woff'),
+        url('fonts/icomoon.svg?qbegwf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+
+/*
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+*/
+
+
+  /* Better Font Rendering =========== */
+/*  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+*/
+/*
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+*/
+/******************FIN***********************/
