@@ -5,136 +5,121 @@ html{
   box-sizing: inherit;
 }
 
-/*CONTENEDOR*/
-.contenedor{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-
-@media only screen and (min-width:320px) {
-  .contenedor{
-    width: 90%;
-  }
-}
-
-@media only screen and (min-width:768px) {
-  .contenedor{
-    width: 90%;
-  }
-}
-
-
-@media only screen and (min-width:992px) {
-  .contenedor{
-    width: 90%;
-
-
-  }
-}
-
 
 
 
 /*CAJAS PRINCIPALES*/
 header{
-  border: 1px solid #000000;
-  height: 100%;
-  width: 20%;
-  float: left;
-  position: fixed;
+  height: 10vh;
+  width: 100%;
 }
 
 section{
-    width: 80%;
-    float: right;
+    width: 100%;
 }
 
-footer{
-  margin-left: 600px;
-  bottom: 0;
-  position:fixed;
-  height:30px;
-}
 
 /*NAVEGACION*/
 div.nav{
-  background-color: #1a1a1a;
+  background-color:rgba(13, 13, 13,.8);;
   width: 100%;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  bottom: 0;
-}
-
-nav.naveg{
-  display: block;
-  padding-top: 40%;
-}
-div.titulo{
-  text-align: center;
-}
-
-div.titulo a{
-  text-decoration:none;
-}
-
-div.titulo h1{
-  color: #ffffff;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin-bottom: 85px;
+  height: 100%;
 }
 
 
-div.menu{
-  text-align: center;
-}
-div.menu a{
-  display: block;
-  text-decoration: none;
-  color: #ffffff;
-  margin-bottom: 15px;
-}
 
 
-div.redes-sociales{
-  text-align: center;
-  margin-top: 85px;
-}
 
-div.redes-sociales a{
-  color: #ffffff;
-  font-size: 2rem;
-  margin-right: 20px;
-}
-
-div.menu a:hover{
-  display: inline-block;
-  background-color: #404040;
-  transition: all 1s ease;
-}
 
 
 /*CONTENIDO PRINCIPAL*/
 
 .index{
-  width: 90%;
+  width: 80%;
+  height: 100%;
   margin: 0 auto;
-  margin-top: 110px;
+  text-align: left;
+}
+.info{
+  height: 100%;
 }
 
+
+
+div.parrafo h1{
+  font-size: 3.5rem;
+  margin: 60px 0 25px 0;
+  color: #808080;
+  border-bottom: 2px solid #808080;
+  display: inline-block;
+}
+
+
 div.parrafo{
-  float: left;
-  width: 50%;
-  margin-right: 50px;
+  text-align: left;
+  width: 100%;
+}
+
+div.parrafo span.letra{
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #808080;
+}
+
+div.imagen{
+  text-align: center;
+  clear: both;
 }
 
 div.imagen img{
+  margin-top: 10%;
   width: 350px;
 }
 
 
+/*FOOTERRRRRRRR*/
+
+footer{
+  bottom: 0;
+  height:7vh;
+}
+
+footer h4{
+  text-align: center;
+  padding-top: 45px;
+  font-size: 1rem;
+  color: #808080;
+}
+
+
+
+
+/*DISEÑO PARA PC*/
+
+@media only screen and (min-width:768px){
+
+  section{
+    height: 80vh;
+  }
+
+  div.parrafo{
+    width: 50%;
+    padding-top: 70px;
+    float: left;
+  }
+
+  div.parrafo h1{
+    font-size: 3.5rem;
+  }
+
+  div.imagen{
+    width: 45%;
+    display: inline;
+  }
+   div.imagen img{
+    margin: 22% 0 0 15%;
+   }
+}
 
 
 
